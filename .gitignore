@@ -27,3 +27,8 @@
 *.exe
 *.out
 *.app
+
+# My excluded files 
+*.suo
+*.filters
+*.VC.*
