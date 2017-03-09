@@ -22,6 +22,10 @@
 *.la
 *.a
 *.lib
+ConnectFour/ConnectFour/Debug/*
+ConnectFour/Debug/*
+ConnectFour/ipch/*
+
 
 # Executables
 *.exe
