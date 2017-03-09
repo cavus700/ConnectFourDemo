@@ -143,14 +143,11 @@
   <ItemGroup>
     <ClInclude Include="ConnectFour.h" />
     <ClInclude Include="Grid.h" />
-    <ClInclude Include="Logger.h" />
     <ClInclude Include="Printer.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConnectFour.cpp" />
-    <ClCompile Include="Logger.cpp" />
-    <ClCompile Include="Printer.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
