@@ -47,10 +47,12 @@ void ConnectFour::makeMove(int column)
 		}
 	}
 
-	if (m_onTurn == e_playerOne)
-		m_onTurn = e_playerTwo;
-	else
-		m_onTurn = e_playerOne;
+	if (!m_isFinished) {
+		if (m_onTurn == e_playerOne)
+			m_onTurn = e_playerTwo;
+		else
+			m_onTurn = e_playerOne;
+	}
 }
 
 bool ConnectFour::hasWon(int col, int row)
