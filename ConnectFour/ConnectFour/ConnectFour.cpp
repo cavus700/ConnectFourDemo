@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "ConnectFour.h"
 #include "Printer.h"
-//Attention conio.h is a windows library (used for getch())
+//conio.h is a windows library (used for getch())
 #include <conio.h>
 //Used for Sleep()
 #include <Windows.h>

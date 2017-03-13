@@ -6,13 +6,10 @@ class Printer
 	
 public:
 	//print() get a reference to a ConnectFourGrid so the object won't be copied when the function is called
-	template < typename T >
-	static void print(std::vector<std::vector<T>>& grid);
+	static void print(ConnectFour::ConnectFourGrid grid);
 };
 
-
-template<typename T>
-void Printer::print(std::vector<std::vector<T>>& grid)
+void Printer::print(ConnectFour::ConnectFourGrid grid)
 {
 	std::cout << std::endl << std::endl << std::endl;
 	std::cout << " 0 1 2 3 4 5 6 " << std::endl;
@@ -21,7 +18,6 @@ void Printer::print(std::vector<std::vector<T>>& grid)
 		for (int iCol = 0; iCol < (int)grid[iRow].size(); iCol++) {
 			std::cout << "|";
 			if (grid[iRow][iCol] != nullptr)
-				//Never use something like this! Your code crashes if T has no member 'symbol'
 				std::cout << grid[iRow][iCol]->symbol;
 			else
 				std::cout << " ";
