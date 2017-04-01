@@ -13,19 +13,9 @@ ConnectFour::ConnectFour()
 {
 }
 
-//Suppresses the warning 4150 only for the destructor
-#pragma warning(push)
-#pragma warning( disable : 4150)
 ConnectFour::~ConnectFour()
 {
-	for (int iCol = 0; iCol < COLUMN_SIZE; iCol++) {
-		for (int iRow = 0; iRow < ROW_SIZE; iRow++) {
-			if (m_grid[iRow][iCol] != nullptr)
-				delete m_grid[iRow][iCol];
-		}
-	}
 }
-#pragma warning(pop)
 
 void ConnectFour::makeMove(int column)
 {
@@ -270,6 +260,7 @@ int main()
 			continue;
 		}
 		if (column == 8) {
+			delete connectFour;
 			return 0;
 		}
 
@@ -278,8 +269,8 @@ int main()
 
 	system("cls");
 	connectFour->print();
-
 	std::cout << std::endl << "Congratulations " << connectFour->getPlayerName(connectFour->onTurn()) << " you won!" << std::endl;
+	delete connectFour;
 
 	system("pause");
 	

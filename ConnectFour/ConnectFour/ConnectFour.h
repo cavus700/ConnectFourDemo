@@ -1,13 +1,19 @@
 #pragma once
 #include "Grid.h"
 
-#define COLUMN_SIZE 7
+//To add a linebreak in a define you have to use 
+#define COLUMN_SIZE \
+7
 #define ROW_SIZE 6
 
 struct player {
 	//structs can have their own constructor and destructor
 	player() {}
 	~player() {}
+
+	bool operator ==(player p) {
+		return id == p.id;
+	}
 
 	operator std::string() {
 		return symbol + "";
@@ -24,7 +30,7 @@ class ConnectFour : public grid::Grid<player*, COLUMN_SIZE, ROW_SIZE> {
 	};
 
 public:
-	typedef const std::vector<std::vector<player*>>& ConnectFourGrid;
+	typedef const std::vector<std::vector<player*>> ConnectFourGrid;
 
 	ConnectFour();
 	~ConnectFour();

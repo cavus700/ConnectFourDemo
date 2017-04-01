@@ -6,10 +6,10 @@ class Printer
 	
 public:
 	//print() get a reference to a ConnectFourGrid so the object won't be copied when the function is called
-	static void print(ConnectFour::ConnectFourGrid grid);
+	static void print(ConnectFour::ConnectFourGrid& grid);
 };
 
-void Printer::print(ConnectFour::ConnectFourGrid grid)
+void Printer::print(ConnectFour::ConnectFourGrid& grid)
 {
 	std::cout << std::endl << std::endl << std::endl;
 	std::cout << " 0 1 2 3 4 5 6 " << std::endl;
